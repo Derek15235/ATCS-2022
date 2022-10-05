@@ -1,0 +1,13 @@
+.content img{
+    width: 50vw;
+    height: 100vh;
+    float: right;
+}
+
+
+.header{
+    position:fixed;
+    top:10px;
+    display: flex;
+    justify-content:flex-end;
+}

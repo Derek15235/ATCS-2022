@@ -1,4 +1,21 @@
-.content img{
+body {
+    background-color: rgb(6, 6, 6);
+    color: white;
+    margin: 0px;
+    overflow:hidden;
+}
+a{
+    color: white;
+}
+a:hover {
+    background-color: gray;
+}
+.content {
+    /* position:relative;
+    top: 50px; */
+    margin:0px
+}
+.content > img{
     width: 50vw;
     height: 100vh;
     float: right;
@@ -6,8 +23,42 @@
 
 
 .header{
-    position:fixed;
-    top:10px;
+    background-color: rgb(56, 60, 61);
     display: flex;
-    justify-content:flex-end;
+    width: 100vw;
+    margin:0px;
+    justify-content:space-evenly;
+}
+
+.info {
+    width: 50vw;
+    text-align: center;
+    
+}
+
+.info img{
+    position:relative;
+    top:30px;
+    width: 48vw;
+    height: 100vh;
+}
+
+.middle {
+    position:absolute;
+    top: 40vh;
+    left: 20vw;
+}
+
+.basic {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+    width:50vw;
+}
+
+.links{
+    display: flex;
+    width:50vw;
+    justify-content:space-around;
 }

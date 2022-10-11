@@ -4,12 +4,7 @@ body {
     margin: 0px;
     overflow:hidden;
 }
-a{
-    color: white;
-}
-a:hover {
-    background-color: gray;
-}
+
 .content {
     /* position:relative;
     top: 50px; */
@@ -27,26 +22,28 @@ a:hover {
     display: flex;
     width: 100vw;
     margin:0px;
+    padding:5px;
     justify-content:space-evenly;
 }
 
 .info {
     width: 50vw;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
     
 }
 
 .info img{
-    position:relative;
-    top:30px;
     width: 48vw;
     height: 100vh;
 }
 
 .middle {
     position:absolute;
-    top: 40vh;
-    left: 20vw;
+    top: 45vh;
+    left:14.5vw
 }
 
 .basic {
@@ -61,4 +58,17 @@ a:hover {
     display: flex;
     width:50vw;
     justify-content:space-around;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+ a:hover {
+    background-color: rgb(88, 88, 88);
+    border-radius: 10px;
+}
+ a > h4{
+    padding-right:10px;
+    padding-left:10px;
+    
 }

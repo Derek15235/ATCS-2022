@@ -5,18 +5,6 @@ body {
     overflow:hidden;
 }
 
-.content {
-    /* position:relative;
-    top: 50px; */
-    margin:0px
-}
-.content > img{
-    width: 50vw;
-    height: 100vh;
-    float: right;
-}
-
-
 .header{
     background-color: rgb(56, 60, 61);
     display: flex;
@@ -24,26 +12,6 @@ body {
     margin:0px;
     padding:5px;
     justify-content:space-evenly;
-}
-
-.info {
-    width: 50vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;;
-    
-}
-
-.info img{
-    width: 48vw;
-    height: 100vh;
-}
-
-.middle {
-    position:absolute;
-    top: 45vh;
-    left:14.5vw
 }
 
 .basic {
@@ -70,5 +38,38 @@ a {
  a > h4{
     padding-right:10px;
     padding-left:10px;
+ }
+
+.content {
+    /* position:relative;
+    top: 50px; */
+    margin:0px
+}
+.content > img{
+    width: 50vw;
+    height: 100vh;
+    float: right;
+}
+
+
+
+
+.info {
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
     
+}
+
+.info img{
+    width: 48vw;
+    height: 100vh;
+}
+
+.middle {
+    position:absolute;
+    top: 45vh;
+    left:14.5vw
 }

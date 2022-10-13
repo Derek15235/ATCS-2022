@@ -8,10 +8,12 @@ body {
 .header{
     background-color: rgb(56, 60, 61);
     display: flex;
+    height:60px;
     width: 100vw;
     margin:0px;
     padding:5px;
     justify-content:space-evenly;
+    align-items: center;
 }
 
 .basic {

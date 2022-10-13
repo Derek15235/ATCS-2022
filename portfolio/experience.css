@@ -3,11 +3,6 @@ body {
     color: white;
     margin:0px;
 }
-.sticky-container{
-    padding:0px;
-    width:100vw;
-    height:100vh;
-}
 .header{
     background-color: rgb(56, 60, 61);
     display: flex;

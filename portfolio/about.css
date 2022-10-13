@@ -1,0 +1,90 @@
+body {
+    background-color:black;
+    color: white;
+    margin:0px;
+}
+.header{
+    background-color: rgb(56, 60, 61);
+    display: flex;
+    position: fixed;
+    z-index:1;
+    height:60px;
+    width: 100vw;
+    margin:0px;
+    padding:5px;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.basic {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+    width:50vw;
+}
+
+.links{
+    display: flex;
+    width:50vw;
+    justify-content:space-around;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+ a:hover {
+    background-color: rgb(88, 88, 88);
+    border-radius: 10px;
+}
+ a > h4{
+    padding-right:10px;
+    padding-left:10px;
+ }
+
+.content {
+    padding-top: 80px; padding-left: 50px; padding-right: 50px; 
+    display: grid;
+    grid-template-rows: 400px 290px 400px 235px;
+}
+
+.blurb-1 {
+    padding: 10px;
+    grid-row: 2;
+    background-color: rgb(57, 57, 57);
+    color: rgb(143, 143, 143);
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.blurb-2 {
+    padding: 10px;
+    grid-row: 4;
+    background-color: rgb(57, 57, 57);
+    color: rgb(143, 143, 143);
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.images-1 {
+    display:flex;
+    justify-content: space-evenly;
+    grid-row: 1;
+
+}
+
+img {
+    height:400px;
+}
+
+.images-2 {
+    display:flex;
+    justify-content: space-evenly;
+    grid-row: 3;
+}
+
+/* TO DO
+Surround paragraph with images
+Or make it on the left and images on the left  
+Gather opnion on if it should scroll or not 
+Maybe gradient header instead of just gray*/

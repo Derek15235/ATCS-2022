@@ -75,12 +75,18 @@ body {
 .contact {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    padding-top: 50px;
+    padding-top: 30px;
  }
  
  .contact img {
     max-height: 33%;
  }
+
+.contact h1 {
+    grid-column: 2;
+    text-align: center;
+    padding-bottom: 30px;
+}
 
  .contact a {
     color: rgb(194, 0, 194);

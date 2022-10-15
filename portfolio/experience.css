@@ -2,6 +2,7 @@ body {
     background-color:black;
     color: white;
     margin:0px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .header{
     background-color: rgb(56, 60, 61);
@@ -85,7 +86,7 @@ a {
  }
 
  .timeline li:nth-child(even) .bullet {
-    right: 9.88vw;
+    right: 8.9vw;
  }
 
 .event{
@@ -105,11 +106,15 @@ a {
     border-radius: 7px;
 }
 
+.event h2 {
+    color:rgb(3, 187, 187);;
+}
+
 .vl {
     position:absolute;
     border-right:5px solid gray;
     border-radius:2px;
     margin:0px;
     left:50vw;
-    height: 310vh;
+    height: 323vh;
 }

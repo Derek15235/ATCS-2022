@@ -1,7 +1,7 @@
 body {
     background-color:black;
-    color: white;
     margin:0px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .header{
     background-color: rgb(56, 60, 61);
@@ -29,15 +29,15 @@ body {
     width:50vw;
     justify-content:space-around;
 }
-a {
+.header a {
     color: white;
     text-decoration: none;
 }
- a:hover {
+.header a:hover {
     background-color: rgb(88, 88, 88);
     border-radius: 10px;
 }
- a > h4{
+.header a > h4{
     padding-right:10px;
     padding-left:10px;
  }
@@ -45,14 +45,14 @@ a {
 .content {
     padding-top: 80px; padding-left: 50px; padding-right: 50px; 
     display: grid;
-    grid-template-rows: 400px 290px 400px 235px;
+    grid-template-rows: 400px 385px 400px 305px;
+    color:rgb(3, 187, 187);
 }
 
 .blurb-1 {
     padding: 10px;
     grid-row: 2;
     background-color: rgb(57, 57, 57);
-    color: rgb(143, 143, 143);
     border-radius: 10px;
     font-size: x-large;
 }
@@ -61,7 +61,6 @@ a {
     padding: 10px;
     grid-row: 4;
     background-color: rgb(57, 57, 57);
-    color: rgb(143, 143, 143);
     border-radius: 10px;
     font-size: x-large;
 }
@@ -70,11 +69,11 @@ a {
     display:flex;
     justify-content: space-evenly;
     grid-row: 1;
-
 }
 
 img {
-    height:400px;
+    max-height:400px;
+    max-width: 50vw;
 }
 
 .images-2 {
@@ -82,9 +81,3 @@ img {
     justify-content: space-evenly;
     grid-row: 3;
 }
-
-/* TO DO
-Surround paragraph with images
-Or make it on the left and images on the left  
-Gather opnion on if it should scroll or not 
-Maybe gradient header instead of just gray*/

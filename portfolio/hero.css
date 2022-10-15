@@ -2,17 +2,19 @@ body {
     background-color: rgb(6, 6, 6);
     color: white;
     margin: 0px;
-    overflow:hidden;
+    overflow:visible;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .header{
     background-color: rgb(56, 60, 61);
     display: flex;
+    position: fixed;
+    z-index:1;
     height:60px;
     width: 100vw;
     margin:0px;
     padding:5px;
-    justify-content:space-evenly;
     align-items: center;
 }
 
@@ -29,22 +31,21 @@ body {
     width:50vw;
     justify-content:space-around;
 }
-a {
+.header a {
     color: white;
     text-decoration: none;
 }
- a:hover {
+ .header a:hover {
     background-color: rgb(88, 88, 88);
     border-radius: 10px;
 }
- a > h4{
+ .header a > h4{
     padding-right:10px;
     padding-left:10px;
  }
 
 .content {
-    /* position:relative;
-    top: 50px; */
+    padding-top:70px;
     margin:0px
 }
 .content > img{
@@ -53,25 +54,52 @@ a {
     float: right;
 }
 
-
-
-
 .info {
-    width: 50vw;
+    width: 48.5vw;
     text-align: center;
     display: flex;
+    margin:0;
+    height: 100vh;
     justify-content: center;
-    align-items: center;;
-    
+    align-items: center; 
 }
 
 .info img{
-    width: 48vw;
-    height: 100vh;
+    width: 45vw;
+    height: 90vh;
 }
 
 .middle {
     position:absolute;
     top: 45vh;
-    left:14.5vw
+    left:13vw
 }
+
+.contact {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-top: 50px;
+ }
+ 
+ .contact img {
+    max-height: 33%;
+ }
+
+ .contact a {
+    color:rgb(194, 0, 194);
+ }
+ 
+ .phone {
+    text-align: center;
+    grid-column: 1;
+ }
+
+ .mail {
+    text-align: center;
+    grid-column: 2;
+ }
+
+ .UTR {
+    text-align: center;
+    grid-column: 3;
+ }

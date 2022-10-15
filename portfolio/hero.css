@@ -2,7 +2,7 @@ body {
     background-color: rgb(6, 6, 6);
     color: white;
     margin: 0px;
-    overflow:visible;
+    overflow: visible;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -10,25 +10,23 @@ body {
     background-color: rgb(56, 60, 61);
     display: flex;
     position: fixed;
-    z-index:1;
-    height:60px;
+    z-index: 1;
+    height: 60px;
     width: 100vw;
-    margin:0px;
-    padding:5px;
+    padding: 5px;
     align-items: center;
 }
 
 .basic {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     padding-left: 40px;
-    width:50vw;
+    width: 50vw;
 }
 
 .links{
     display: flex;
-    width:50vw;
+    width: 50vw;
     justify-content:space-around;
 }
 .header a {
@@ -40,13 +38,13 @@ body {
     border-radius: 10px;
 }
  .header a > h4{
-    padding-right:10px;
-    padding-left:10px;
+    padding-right: 10px;
+    padding-left: 10px;
  }
 
 .content {
-    padding-top:70px;
-    margin:0px
+    padding-top: 70px;
+    margin: 0px
 }
 .content > img{
     width: 50vw;
@@ -58,7 +56,6 @@ body {
     width: 48.5vw;
     text-align: center;
     display: flex;
-    margin:0;
     height: 100vh;
     justify-content: center;
     align-items: center; 
@@ -70,9 +67,9 @@ body {
 }
 
 .middle {
-    position:absolute;
+    position: absolute;
     top: 45vh;
-    left:13vw
+    left: 13vw
 }
 
 .contact {
@@ -86,7 +83,7 @@ body {
  }
 
  .contact a {
-    color:rgb(194, 0, 194);
+    color: rgb(194, 0, 194);
  }
  
  .phone {

@@ -76,15 +76,15 @@ a {
     border: 1px solid white;
     border-radius: 50%;
     position: relative;
-    bottom: 27vh;
+    bottom: 200px;
  }
 
  .timeline li:nth-child(odd) .bullet {
-    left: 37.2vw;
+    left: 535.5px;
  }
 
  .timeline li:nth-child(even) .bullet {
-    right: 9.85vw;
+    right: 142.5px;
  }
 
 .event{
@@ -105,7 +105,7 @@ a {
 }
 
 .event h2 {
-    color: rgb(3, 187, 187);;
+    color: rgb(3, 187, 187);
 }
 
 .vl {
@@ -114,5 +114,5 @@ a {
     border-radius: 2px;
     margin: 0px;
     left: 50vw;
-    height: 323vh;
+    height: 2570px;
 }

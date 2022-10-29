@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(6, 6, 6);
+    color: white;
+    margin: 0px;
+    overflow: visible;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg-grey {
+    background-color: rgb(56, 60, 61);
+}
+

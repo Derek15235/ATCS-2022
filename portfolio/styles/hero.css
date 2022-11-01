@@ -1,13 +1,7 @@
-body {
-    background-color: rgb(6, 6, 6);
-    color: white;
-    margin: 0px;
-    overflow: visible;
-    font-family: 'Courier New', Courier, monospace;
-}
 
 .intro {
     height:80vh;
+    color: black;
     background-image: url("photos/me.jpg");
     background-size:cover;
     background-repeat: no-repeat;

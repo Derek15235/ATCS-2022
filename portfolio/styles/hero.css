@@ -44,6 +44,13 @@
     margin-top:90px;
     margin-bottom:50px;
 }
+
+@media (max-width: 768px)
+{
+    .intro {
+        background-image: url("/Users/derek/Desktop/ATCS/ATCS-2022/portfolio/photos/win.png");
+    }
+}
 /* 
 .contact {
     display: grid;

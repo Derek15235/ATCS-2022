@@ -2,26 +2,29 @@ img {
   height: 85vh;
 }
 
+.appear {
+    display: none;
+}
 
-.content {
-    padding-top: 80px; padding-left: 50px; padding-right: 50px; 
-    color: rgb(3, 187, 187);
+
+@media (max-width: 575px) {
+    .disappear {
+        display: none;
+    }
+    .appear{
+        display: initial;
+    }
 }
 
 .me {
     padding: 10px;
     background-color: rgb(57, 57, 57);
     border-radius: 10px;
-    font-size: x-large;
+    font-size: smaller;
 }
 
-.images {
-    display: flex;
-    justify-content: space-evenly;
+.card img {
+    max-height: 375px;
 }
 
-/* img {
-    max-height: 400px;
-    max-width: 50vw;
-} */
 

@@ -15,7 +15,7 @@
     <body>
         <!--Obtained and altered from https://getbootstrap.com/docs/4.0/components/navbar/-->
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-            <a class="navbar-brand" href="#">Derek</a>
+            <a class="navbar-brand" href="index.html">DJ</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,8 +34,8 @@
             </div>
         </nav>
         <div class="container">
-            <!--Catousel elements obtained and altered from https://getbootstrap.com/docs/4.0/components/carousel/-->
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!--Each carousel obtained and altered from https://getbootstrap.com/docs/4.0/components/carousel/-->
+            <div id="carouselExampleIndicators" class="carousel slide disappear" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -121,28 +121,44 @@
               </div>
               
         </div>
-        <!-- <div class="content">
-            <div class="images">
-                <img src="About-photos/wedding.JPG">
-                <img src="About-photos/menlo.png">
+        <!--Obtained and altered from: https://getbootstrap.com/docs/4.0/components/card/#card-decks-->
+        <div class="appear">
+          <div class="card-deck">
+            <div class="card bg-dark short">
+              <img class="card-img-top" src="photos/wedding.JPG" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Ever since I was 5, I spent half of my time working on school and my other half playing tennis. It has been over 11 years since that point, and it all started at the Menlo Circus Club. I took a liking to the sport since it felt so fast paced while also being so independent. 
+                  Talking about my family, my dad immigrated from India at the age of 5 and my mom has always lived in the United States. I've taken part in many of my dad's traditions, usually attending Indian weddings with his family mainly in the east coast.</p>
+              </div>
             </div>
-            <p class="me">
-                Ever since I was 5, I spent half of my time working on school and my other half playing tennis. It has been over 11 years since that point, and it all started at the Menlo Circus Club. I took a liking to the sport since it felt so fast paced while also being so independent. 
-                Talking about my family, my dad immigrated from India at the age of 5 and my mom has always lived in the United States. I've taken part in many of my dad's traditions, usually attending Indian weddings with his family mainly in the east coast.
-                I also have one dog and two older sisters, one who has graduated form dartmouth and the other is a sophmore at UCLA. 
-                I attended Trinity Elemntary school and am now a a junior at Menlo Highschool. As a student, I've gained intrest in many other fields, especilly more in computer science. I have taken all the courses for computer science as I could at Menlo and am now taking AT CS. 
-            </p>
-            <div class="images">
-                <img src="About-photos/Doubles.png">
-                <img src="About-photos/GreenBallWhiteLetter.png">
+            <div class="card bg-dark">
+              <img class="card-img-top" src="photos/menlo.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">I also have one dog and two older sisters, one who has graduated form dartmouth and the other is a sophmore at UCLA. 
+                  I attended Trinity Elemntary school and am now a a junior at Menlo Highschool. As a student, I've gained intrest in many other fields, especilly more in computer science. I have taken all the courses for computer science as I could at Menlo and am now taking AT CS.</p>
+              </div>
             </div>
-            <p class="me">
-                Today, I practice my tennis at the Plus One academy (originally named Pure Pace) located in Ladera Rec. In this picture is my friend, Same Engel, who also attends my academy. For the past two highschool years, 
-                I have been at the top of our school's junior varsity team and have gone undefeated as either number one or number two singles indivudally during our team matches. In 2023, I will hopefully
-                be joining our school's varisty roster and keep our trend of being part of the top in the nation. I also now volunteer as an aistant coach at an orginazation called 'EPATT' (East Palo Alto Tennis & Tutoring) during the summer and the first semester of each school year.
-                Ultimately, tennis has been one of the biggest factors in my life and it is a sport that helps me and encourages me to strive for more.
-            </p>
-        </div> -->
+            <div class="card bg-dark">
+              <img class="card-img-top" src="photos/Doubles.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  Today, I practice my tennis at the Plus One academy (originally named Pure Pace) located in Ladera Rec. In this picture is my friend, Same Engel, who also attends my academy. For the past two highschool years, 
+                  I have been at the top of our school's junior varsity team and have gone undefeated as either number one or number two singles indivudally during our team matches. In 2023, I will hopefully
+                  be joining our school's varisty roster and keep our trend of being part of the top in the nation.
+                </p>
+              </div>
+            </div>
+            <div class="card bg-dark">
+              <img class="card-img-top" src="photos/GreenBallWhiteLetter.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  I also now volunteer as an aistant coach at an orginazation called 'EPATT' (East Palo Alto Tennis & Tutoring) during the summer and the first semester of each school year.
+                  Ultimately, tennis has been one of the biggest factors in my life and it is a sport that helps me and encourages me to strive for more.
+                </p>
+              </div>
+            </div>
+          </div>
         <!-- Your Content ABOVE this Line -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

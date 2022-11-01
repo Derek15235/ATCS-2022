@@ -20,15 +20,18 @@
 
 .wide {
     width:100%;
+    padding: 10px;
 }
 
 .wide img {
-    max-height: 350px;
+    height: 325px;
     width: 100%;
+}
+
+.bordered {
     border: 5px solid rgb(170, 170, 170);
     border-radius: 7px;
 }
-
 .wide h2 {
     color: rgb(3, 187, 187);
 }

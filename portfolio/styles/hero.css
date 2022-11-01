@@ -1,8 +1,8 @@
 
 .intro {
     height:80vh;
-    color: black;
-    background-image: url("photos/me.jpg");
+    color: white;
+    background-image: url("/Users/derek/Desktop/ATCS/ATCS-2022/portfolio/photos/me.jpg");
     background-size:cover;
     background-repeat: no-repeat;
 }

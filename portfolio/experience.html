@@ -33,32 +33,34 @@
             </ul>
             </div>
         </nav>
+        <!--Card elements/styles obtained and altered from https://getbootstrap.com/docs/4.0/components/card/-->
+        <!--Carousel elements/styles obtained and altered from https://getbootstrap.com/docs/4.0/components/carousel/-->
         <div class="container">
             <div class="timeline">
                 <div class="row spaced">
                     <div class="col-md-6">
                         <div class="card bg-dark wide text-center">
-                            <div id="carouselExampleControls" class="carousel slide card-img-top" data-ride="carousel">
+                            <div id="carouselStartControls" class="carousel slide card-img-top bordered" data-ride="carousel">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
                                     <img class="d-block w-100" src="photos/begin.png" alt="First slide">
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="..." alt="Second slide">
+                                    <img class="d-block w-100" src="photos/first-lesson.JPG" alt="Second slide">
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="..." alt="Third slide">
+                                    <img class="d-block w-100" src="photos/halloween.JPG" alt="Third slide">
                                   </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselStartControls" role="button" data-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselStartControls" role="button" data-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="sr-only">Next</span>
                                 </a>
-                              </div>
+                            </div>
                             <div class="card-body">
                                 <h2 class="card-text">Starting Tennis</h2>
                                 <p class="card-text">In 2011, I started tennis when I was 5 years old at the Menlo Circus Club.</p>
@@ -69,7 +71,7 @@
                 <div class="row spaced">
                     <div class="offset-md-6 col-md-6">
                         <div class="card bg-dark wide text-center">
-                            <img class="card-img-top" src="photos/sets.png" alt="Card image cap">
+                            <img class="card-img-top bordered" src="photos/sets.png" alt="Card image cap">
                             <div class="card-body">
                                 <h2 class="card-text">50 Sets</h2>
                                 <p class="card-text">In 2017, I got the award at my club for completing 50 sets within one summer. I got 100 sets the next year.</p>
@@ -80,7 +82,27 @@
                 <div class="row spaced">
                     <div class="col-md-6">
                         <div class="card bg-dark wide text-center">
-                            <img class="card-img-top" src="photos/first.png" alt="Card image cap">
+                            <div id="carouselTournamentControls" class="carousel slide card-img-top bordered" data-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="d-block w-100" src="photos/first.png" alt="First slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="photos/playing.jpeg" alt="Second slide">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="photos/tournament-view.png" alt="Third slide">
+                                </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselTournamentControls" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselTournamentControls" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                             <div class="card-body">
                                 <h2 class="card-text">Playing My First Tournament</h2>
                                 <p class="card-text">In 2018, I started to play more competetively at the age of 12.</p>
@@ -91,7 +113,7 @@
                 <div class="row spaced">
                     <div class="offset-md-6 col-md-6">
                         <div class="card bg-dark wide text-center">
-                            <img class="card-img-top" src="photos/win.png" alt="Card image cap">
+                            <img class="card-img-top bordered" src="photos/win.png" alt="Card image cap">
                             <div class="card-body">
                                 <h2 class="card-text">Winning My First  Tournament</h2>
                                 <p class="'card-text">In 2019, I won my first tournament at Willow Glen Highschool.</p>
@@ -103,7 +125,7 @@
                     <div class="col-md-6">
                         <div class="card bg-dark wide text-center">
                             <div class="card bg-dark">
-                                <img class="card-img-top" src="photos/junior.png" alt="Card image cap">
+                                <img class="card-img-top bordered" src="photos/junior.png" alt="Card image cap">
                                 <div class="card-body">
                                     <h2 class="card-text">Junior Player of the Year</h2>
                                     <p class="card-text">In 2020, I was named Junior Player of the Year at my club.</p>
@@ -116,7 +138,27 @@
                     <div class="offset-md-6 col-md-6">
                         <div class="card bg-dark wide text-center">
                             <div class="card bg-dark">
-                                <img class="card-img-top" src="photos/invintational.png" alt="Card image cap">
+                                <div id="carouselInviteControls" class="carousel slide card-img-top bordered" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <img class="d-block w-100" src="photos/invintational.png" alt="First slide">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img class="d-block w-100" src="photos/twin.jpeg" alt="Second slide">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img class="d-block w-100" src="photos/pose.jpeg" alt="Third slide">
+                                      </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselInviteControls" role="button" data-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselInviteControls" role="button" data-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
                                 <div class="card-body">
                                     <h2 class="card-text">Circus Club Doubles Invitational</h2>
                                     <p class="card-text">In 2022, Sam Engel and I won our section of the Circus Club's Invitationals.</p>
@@ -127,63 +169,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="container">
-            <div class="timeline">
-                <div class="vl"></div>
-                <ul>
-                    <li>
-                        <div class="event">
-                            <img src="Experience-photos/begin.png">
-                            <h2>Starting Tennis</h2>
-                            <p>In 2011, I started tennis when I was 5 years old at the Menlo Circus Club.</p>
-                            <div class="bullet" ></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event">
-                            <img src="Experience-photos/sets.png">
-                            <h2>50 Sets</h2>
-                            <p>In 2017, I got the award at my club for completing 50 sets within one summer. I got 100 sets the next year.</p>
-                            <div class="bullet" ></div>
-                        </div>
-                        
-                    </li>
-                    <li>
-                        <div class="event">
-                            <img src="Experience-photos/first.png">
-                            <h2>Playing My First Tournament</h2>
-                            <p>In 2018, I started to play more competetively at the age of 12.</p>
-                            <div class="bullet" ></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event">
-                            <img src="Experience-photos/win.png">
-                            <h2>Winning My First  Tournament</h2>
-                            <p>In 2019, I won my first tournament at Willow Glen Highschool.</p>
-                            <div class="bullet" ></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event">
-                            <img src="Experience-photos/junior.png">
-                            <h2>Junior Player of the Year</h2>
-                            <p>In 2020, I was named Junior Player of the Year at my club.</p>
-                            <div class="bullet" ></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event">
-                            <img src="Experience-photos/invintational.png">
-                            <h2>Circus Club Doubles Invitational</h2>
-                            <p>In 2022, Sam Engel and I won our section of the Circus Club's Invitationals.</p>
-                            <div class="bullet" ></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </div> -->
         <!-- Your Content ABOVE this Line -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

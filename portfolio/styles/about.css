@@ -1,12 +1,18 @@
-img {
+/* Carousel */
+.carousel img {
   height: 85vh;
+}
+
+/* Cards */
+.card img {
+    max-height: 375px;
 }
 
 .appear {
     display: none;
 }
 
-
+/* Small media */
 @media (max-width: 575px) {
     .disappear {
         display: none;
@@ -15,16 +21,3 @@ img {
         display: initial;
     }
 }
-
-.me {
-    padding: 10px;
-    background-color: rgb(57, 57, 57);
-    border-radius: 10px;
-    font-size: smaller;
-}
-
-.card img {
-    max-height: 375px;
-}
-
-

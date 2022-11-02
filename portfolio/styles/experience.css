@@ -1,4 +1,4 @@
-
+/* Timeline */
 .timeline {
     position: relative;
     padding:5px;
@@ -13,7 +13,7 @@
     height:100%;
     border: 1px dashed grey;
 }
-
+/* Events */
 .spaced {
     margin-bottom: 35px;
 }
@@ -21,6 +21,10 @@
 .wide {
     width:100%;
     padding: 10px;
+}
+
+.wide h2 {
+    color: rgb(3, 187, 187);
 }
 
 .wide img {
@@ -32,87 +36,10 @@
     border: 5px solid rgb(170, 170, 170);
     border-radius: 7px;
 }
-.wide h2 {
-    color: rgb(3, 187, 187);
-}
 
+/* Small media */
 @media (max-width: 768px) {
     .timeline:after{
         border: 0;
     }
 }
-
-
-/* .container {
-    display: flex;
-    height: 200vh;
-    padding: 60px;
-    align-items: center;
-    justify-content: center;
-}
-.timeline {
-    height: 90%;
-    width: 90%;
-}
-
-.timeline ul {
-    list-style: none;
-}
-
-.timeline ul li:nth-child(even) {
-   float:right;
-   clear:left;
-}
-
-.timeline ul li:nth-child(odd) {
-    float:left;
-    clear:right;
- }
-
- .bullet { 
-    width:20px;
-    height:20px;
-    background-color: rgb(160, 159, 159);
-    border: 1px solid white;
-    border-radius: 50%;
-    position: relative;
-    bottom: 200px;
- }
-
- .timeline li:nth-child(odd) .bullet {
-    left: 535.5px;
- }
-
- .timeline li:nth-child(even) .bullet {
-    right: 142.5px;
- }
-
-.event{
-    border-radius: 10px;
-    width: 450px;
-    text-align: center;
-    background: rgb(55, 55, 55);
-    padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 20px;
-    margin-bottom: 25px;
-
-}
-
-.event img{
-    max-height: 250px;
-    max-width: 400px;
-    border: 5px solid rgb(170, 170, 170);
-    border-radius: 7px;
-}
-
-.event h2 {
-    color: rgb(3, 187, 187);
-}
-
-.vl {
-    position: absolute;
-    border-right: 5px solid gray;
-    border-radius: 2px;
-    margin: 0px;
-    left: 50vw;
-    height: 2570px;
-} */

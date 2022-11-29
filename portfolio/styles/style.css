@@ -1,0 +1,9 @@
+/* || General Style */
+body {
+    background-color: rgb(6, 6, 6);
+    color: white;
+    margin: 0px;
+    overflow: visible;
+    font-family: 'Courier New', Courier, monospace;
+}
+

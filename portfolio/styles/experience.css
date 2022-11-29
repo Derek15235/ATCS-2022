@@ -1,0 +1,45 @@
+/* Timeline */
+.timeline {
+    position: relative;
+    padding:5px;
+    margin:5px;
+}
+
+.timeline:after{
+    content:"";
+    position: absolute;
+    top:0;
+    right: 50%;
+    height:100%;
+    border: 1px dashed grey;
+}
+/* Events */
+.spaced {
+    margin-bottom: 35px;
+}
+
+.wide {
+    width:100%;
+    padding: 10px;
+}
+
+.wide h2 {
+    color: rgb(3, 187, 187);
+}
+
+.wide img {
+    height: 325px;
+    width: 100%;
+}
+
+.bordered {
+    border: 5px solid rgb(170, 170, 170);
+    border-radius: 7px;
+}
+
+/* Small media */
+@media (max-width: 768px) {
+    .timeline:after{
+        border: 0;
+    }
+}

@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+         <!-- Your Personal CSS BELOW this Line -->
         <title>Home - Derek Jain</title> 
-        <link rel="stylesheet" type="text/css" href="hero.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/hero.css">
     </head>
     <body>
-       
-            <div class="header">
-                <div class="basic">
-                    <a href="index.html">
-                        <h4>Derek</h4>
-                    </a>
-                </div>
-                <div class="links">
-                    <a href="about.html">
-                        <h4>About me</h4>
-                    </a>
-                    <a href="experience.html">
-                        <h4>Experience</h4>
-                    </a>
-                </div>
-
+        <!--Obtained and altered from https://getbootstrap.com/docs/4.0/components/navbar/-->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <a class="navbar-brand" href="index.html">DJ</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="experience.html">Experience</a>
+                </li>
+            </ul>
             </div>
-            <div class="content">
-                <img src="hero-photos/me.jpg">
-                <div class="info">
-                    <img src="hero-photos/circle.png">
-                    <div class="middle">
-                        <h2>Derek Jain</h2>
-                        <h2>Tennis Player | Student </h2>
+        </nav>
+        <div class="container">
+            <div class="jumbotron intro">
+              <!--Obtained and altered from https://bootsnipp.com/snippets/XRNAv-->
+              <h1>
+                Hi, I'm
+                <a class="typewrite" data-period="2000" data-type='[ "Derek Jain.", "a Tennis Player.", "a Student."]''>
+                  <span class="wrap"></span>
+                </a>
+              </h1>
+            </div>
+        </div>
+        <div class="container text-center contact">
+            <h1>Contact Me!</h1>
+            <!--Card related code obtained and altered from: https://getbootstrap.com/docs/4.0/components/card/#card-decks-->
+            <div class="card-deck">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                      <h5 class="card-title">Email</h5>
+                      <p class="card-text">Message me through my two emails!</p>
+                      <!--Obtained and altered from https://getbootstrap.com/docs/4.0/components/dropdowns/-->
+                      <div class="btn-group dropright">
+                        <button type="button" class="btn bg-teal dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Emails
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item">School: derek.jain@menloschool.org</a>
+                          <a class="dropdown-item">Personal: derekdjain@gmail.com</a>
+                        </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-            <hr>
-            <div class="contact">
-                <h1>Contact Derek!</h1>
-                <div class="phone">
-                    <h1>Phone</h1>
-                    <img src="contact-photos/phone-3-icon-17-256.png">
-                    <h3>My Number:</h3>
-                    <h4>650-206-3903</h4>
-                </div>
-    
-                <div class="mail">
-                    <h1>Mail</h1>
-                    <img src="contact-photos/email-icon.png">
-                    <h3>Personal Email:</h3>
-                    <h4>derekdjain@gmail.com</h4>
-                    <h3>School Email:</h3>
-                    <h4>derek.jain@menloschool.org</h4>
-                </div>
-    
-                <div class="UTR">
-                    <h1>UTR</h1>
-                    <img src="contact-photos/ball.svg">
-                    <h3>Contact me at the Universal Tennis site:</h3>
-                    <a href="https://app.universaltennis.com/profiles/473516">
-                        Unniveral Tennis Link
-                    </a>
-                </div>
-            </div>
+                  </div>
+                <div class="card bg-dark">
+                    <div class="card-body ">
+                      <h5 class="card-title">Phone</h5>
+                      <p class="card-text">Get ahold of me through direct calling.</p>
+                    
+                      <p class="card-text">My Number: 650-206-3903</p>
+                    </div>
+                  </div>                  
+                  <div class="card bg-dark">
+                    <div class="card-body">
+                      <h5 class="card-title">UTR</h5>
+                      <p class="card-text">Contact me at the Universal Tennis site:</p>
+                      <a href="https://app.universaltennis.com/profiles/473516" class="btn bg-teal">Universal Tennis</a>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        <script src="scripts/typing.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
         
     </body>
 </html>

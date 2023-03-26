@@ -58,7 +58,7 @@ class Twitter:
             db_session.add(self.current_user)
             db_session.commit()
             print("Welcome " + username + "!")
-            break
+            break 
 
     """
     Logs the user in. The user

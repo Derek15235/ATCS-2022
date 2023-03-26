@@ -66,7 +66,7 @@ class Tweet(Base):
     def __repr__(self):
         all_tags = ""
         for tag in self.tags:
-            all_tags += " " + str(tag)
+            all_tags += str(tag) + " "
         return str(self.user) + "\n" + self.content + "\n" + all_tags + "\n" + self.timestamp
     
 
@@ -78,6 +78,7 @@ class Tag(Base):
     tweets = relationship("Tweet", secondary="tweet_tags", back_populates="tags")
 
     def __init__(self, content):
+        # id autoincrements
         self.content = content
     def __repr__(self):
         return "#" + self.content

@@ -4,9 +4,9 @@ from datetime import datetime
 
 class Twitter:
 
-    def __init__(self):
-        self.current_user = None
-        self.logged_in = False
+    def __init__(self, current_user=None, logged_in=False):
+        self.current_user = current_user
+        self.logged_in = logged_in
     """
     The menu to print once a user has logged in
     """
@@ -44,21 +44,25 @@ class Twitter:
     def register_user(self):
         users = db_session.query(User).all()
         while True:
-            username = input("What will your twitter handle be?")
-            password = input("Enter a password:")
-            if input("Re-enter your password:") != password:
+            # Ask for username and password
+            username = input("What will your twitter handle be?\n")
+            password = input("Enter a password: ")
+            # Prompt again if passwords don't match
+            if input("Re-enter your password: ") != password:
                 print("Those passwords don't match. Try Again.")
                 continue
+            # Prompt again if username is taken
             for used_username in users:
                 if username == used_username:
                     print("That username is already taken. Try Again.")
                     continue
+            # Set object instance variables and add to database 
             self.current_user = User(username, password)
             self.logged_in = True
             db_session.add(self.current_user)
             db_session.commit()
             print("Welcome " + username + "!")
-            break 
+            break
 
     """
     Logs the user in. The user
@@ -66,22 +70,27 @@ class Twitter:
     """
     def login(self):
         while True:
+            # Prompt for username and password
             username = input("Username: ")
             password = input("Password: ")
+            # Query for this specific login, and if there is nothing that has the inputted login info, prompt again
             user = db_session.query(User).where((User.username == username) & (User.password == password)).first()
-            if user is not None:
+            if user is None:
+                print("Username or password is invalid")
+            else:
+                # If login info is correct, update instance variables to reflect
                 print("Welcome " + username + "!")
                 self.current_user = user
                 self.logged_in = True
-                break
-            print("Username or password is invalid")
-            
+                break 
 
     
     def logout(self):
+        # Reset login info
         self.current_user = None
         self.logged_in = False
         print("You have logged out.")
+        # Prompt again if they want to access a different account
         self.startup()
 
     """
@@ -89,6 +98,7 @@ class Twitter:
     register, or exit.
     """
     def startup(self):
+        # Welcome user and prompt them to choose menu option
         print("Welcome to ATCS Twitter!")
         print("Please select a Menu Option")
         option = int(input("1. Login\n2. Register User\n0. Exit\n"))
@@ -100,11 +110,14 @@ class Twitter:
         
 
     def follow(self):
+        # Prompt and query requested user to follow
         following_id = input("Who would you like to follow?\n")
         following_user = db_session.query(User).where(User.username == following_id).first()
+        # If the user already follows the request following, tell them
         if following_user in self.current_user.following:
             print("You already follow " + following_id)
         else:
+            # Make sure the requested user exists and then follow them if they do
             if following_user is not None:
                 db_session.add(Follower(self.current_user.username, following_id))
                 db_session.commit()
@@ -114,8 +127,10 @@ class Twitter:
         
 
     def unfollow(self):
+        # Prompt for requested user to unfollow
         following_id = input("Who would you like to unfollow?\n")
         currently_following = db_session.query(Follower).where((Follower.follower_id == self.current_user.username) & (Follower.following_id == following_id)).first()
+        # Delete from the user's following if they do follow them
         if currently_following is not None:
             db_session.delete(currently_following)
             db_session.commit()
@@ -126,12 +141,14 @@ class Twitter:
 
 
     def tweet(self):
+        # Prompt for tweet's content and tags
         content = input("Create Tweet: ")
-        tags = input("Enter Your Tags: ")
+        tags = input("Enter your tags seperated by spaces: ")
         tags = tags.split()
         tweet = Tweet(content, self.current_user.username, datetime.now())
         db_session.add(tweet)
         db_session.commit()
+        # Create tweet tag to connect the tweet and tag
         for tag in tags:
             current = db_session.query(Tag).where(Tag.content == tag).first()
             if current is None:
@@ -140,10 +157,12 @@ class Twitter:
                 db_session.commit()
             db_session.add(TweetTag(tweet.id, current.id))
         db_session.commit()
+        print("Your tweet has been posted!")
         
 
     
     def view_my_tweets(self):
+        # Get list of user's tweets and print them
         tweets = self.current_user.tweets
         self.print_tweets(tweets)
     
@@ -154,12 +173,14 @@ class Twitter:
     def view_feed(self):
         following = self.current_user.following
         for user in following:
+            # For each tweet from each user only print the most recent 5 if there is more than 5
             if len(user.tweets) >= 5:
-                self.print_tweets(user.tweets[0:5])
+                self.print_tweets(user.tweets[-5:])
             else:
                 self.print_tweets(user.tweets)
 
     def search_by_user(self):
+        # Prompt user for requested user and print all tweets by that user
         username = input("Username: ")
         user = db_session.query(User).where(User.username == username).first()
         if user is None:
@@ -168,6 +189,7 @@ class Twitter:
             self.print_tweets(user.tweets)
 
     def search_by_tag(self):
+        # Prompt user for requested tag and print all tweets with that tag
         content = input("Tag: ")
         tag = db_session.query(Tag).where(Tag.content == content).first()
         if tag is None or len(tag.tweets) == 0:

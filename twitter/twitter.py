@@ -42,7 +42,6 @@ class Twitter:
     is guaranteed to be logged in after this function.
     """
     def register_user(self):
-        users = db_session.query(User).all()
         while True:
             # Ask for username and password
             username = input("What will your twitter handle be?\n")
@@ -52,10 +51,9 @@ class Twitter:
                 print("Those passwords don't match. Try Again.")
                 continue
             # Prompt again if username is taken
-            for used_username in users:
-                if username == used_username:
-                    print("That username is already taken. Try Again.")
-                    continue
+            if db_session.query(User).where(User.username == username).first() is not None:
+                print("This username is already taken. Try again.")
+                continue
             # Set object instance variables and add to database 
             self.current_user = User(username, password)
             self.logged_in = True
@@ -171,13 +169,11 @@ class Twitter:
     people the user follows
     """
     def view_feed(self):
-        following = self.current_user.following
-        for user in following:
-            # For each tweet from each user only print the most recent 5 if there is more than 5
-            if len(user.tweets) >= 5:
-                self.print_tweets(user.tweets[-5:])
-            else:
-                self.print_tweets(user.tweets)
+        # Print 5 most recent tweets from following list
+        users = [user.username for user in self.current_user.following]
+        tweets = db_session.query(Tweet).where(Tweet.username.in_(users)).order_by(Tweet.timestamp.desc()).limit(5)
+        self.print_tweets(tweets)
+        
 
     def search_by_user(self):
         # Prompt user for requested user and print all tweets by that user

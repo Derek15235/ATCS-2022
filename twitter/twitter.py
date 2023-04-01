@@ -96,14 +96,22 @@ class Twitter:
     register, or exit.
     """
     def startup(self):
-        # Welcome user and prompt them to choose menu option
+        # Welcome user and prompt them to choose a valid menu option
         print("Welcome to ATCS Twitter!")
-        print("Please select a Menu Option")
-        option = int(input("1. Login\n2. Register User\n0. Exit\n"))
-        if option == 1:
-            self.login()
-        elif option == 2:
-            self.register_user()
+        while True:
+            print("Please select a Menu Option")
+            option = int(input("1. Login\n2. Register User\n0. Exit\n"))
+            if option == 1:
+                self.login()
+                break
+            elif option == 2:
+                self.register_user()
+                break
+            elif option == 0:
+                break
+            else:
+                print("Choose a valid option. Try again.")
+            
             
         
 
@@ -141,13 +149,12 @@ class Twitter:
     def tweet(self):
         # Prompt for tweet's content and tags
         content = input("Create Tweet: ")
-        tags = input("Enter your tags seperated by spaces: ")
-        tags = tags.split()
+        tags = input("Enter your tags seperated by spaces: ") 
         tweet = Tweet(content, self.current_user.username, datetime.now())
         db_session.add(tweet)
         db_session.commit()
         # Create tweet tag to connect the tweet and tag
-        for tag in tags:
+        for tag in tags.split():
             current = db_session.query(Tag).where(Tag.content == tag).first()
             if current is None:
                 current = Tag(tag)
@@ -161,8 +168,7 @@ class Twitter:
     
     def view_my_tweets(self):
         # Get list of user's tweets and print them
-        tweets = self.current_user.tweets
-        self.print_tweets(tweets)
+        self.print_tweets(self.current_user.tweets)
     
     """
     Prints the 5 most recent tweets of the 

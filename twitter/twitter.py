@@ -135,10 +135,10 @@ class Twitter:
     def unfollow(self):
         # Prompt for requested user to unfollow
         following_id = input("Who would you like to unfollow?\n")
-        currently_following = db_session.query(Follower).where((Follower.follower_id == self.current_user.username) & (Follower.following_id == following_id)).first()
+        following = db_session.query(Follower).where((Follower.follower_id == self.current_user.username) & (Follower.following_id == following_id)).first()
         # Delete from the user's following if they do follow them
-        if currently_following is not None:
-            db_session.delete(currently_following)
+        if following is not None:
+            db_session.delete(following)
             db_session.commit()
             print("You no longer follow " + following_id)
         else:
@@ -148,8 +148,8 @@ class Twitter:
 
     def tweet(self):
         # Prompt for tweet's content and tags
-        content = input("Create Tweet: ")
-        tags = input("Enter your tags seperated by spaces: ") 
+        content = input("Create Tweet:\n")
+        tags = input("Enter your tags seperated by spaces:\n") 
         tweet = Tweet(content, self.current_user.username, datetime.now())
         db_session.add(tweet)
         db_session.commit()
@@ -192,12 +192,12 @@ class Twitter:
 
     def search_by_tag(self):
         # Prompt user for requested tag and print all tweets with that tag
-        content = input("Tag: ")
-        tag = db_session.query(Tag).where(Tag.content == content).first()
-        if tag is None or len(tag.tweets) == 0:
-            print("There is no tweets with this tag")
+        tag = input("Tag: ")
+        searched = db_session.query(Tag).where(Tag.content == tag).first()
+        if searched is None:
+            print("This tag does not exist")
         else:
-            self.print_tweets(tag.tweets)
+            self.print_tweets(searched.tweets)
         
 
     """
